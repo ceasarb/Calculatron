@@ -23,6 +23,18 @@
 
 - (IBAction)onOperandPressed:(UIButton *)sender {
     
+    self.operation.text =sender.titleLabel.text;
+    NSString *operation = self.operation.text;
+    if([operation isEqualToString: @"+"]) {
+        
+    }else if ([operation isEqualToString: @"-"]){
+        
+    }else if ([operation isEqualToString: @"x"]){
+        
+    }else{
+        
+    }
+    
 }
 
 @end
