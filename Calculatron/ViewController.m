@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *operandTwo;
 @property (strong, nonatomic) IBOutlet UILabel *operation;
 
+@property (strong, nonatomic) IBOutlet UILabel *answerLabel;
 @end
 
 @implementation ViewController
@@ -27,14 +28,22 @@
     
     self.operation.text =sender.titleLabel.text;
     NSString *operation = self.operation.text;
+
     if([operation isEqualToString: @"+"]) {
+        self.answerLabel.text = [NSString stringWithFormat:@"%.2f", op1 + op2];
         
     }else if ([operation isEqualToString: @"-"]){
-        
+        self.answerLabel.text = [NSString stringWithFormat:@"%.2f", op1 - op2];
+
+
     }else if ([operation isEqualToString: @"x"]){
-        
+        self.answerLabel.text = [NSString stringWithFormat:@"%.2f", op1 * op2];
+
+
     }else{
-        
+        self.answerLabel.text = [NSString stringWithFormat:@"%.2f", op1 / op2];
+
+
     }
     
 
