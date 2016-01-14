@@ -22,6 +22,8 @@
 }
 
 - (IBAction)onOperandPressed:(UIButton *)sender {
+    double op1 = self.operandOne.text.doubleValue;
+    double op2 = self.operandTwo.text.doubleValue;
     
     self.operation.text =sender.titleLabel.text;
     NSString *operation = self.operation.text;
@@ -35,6 +37,7 @@
         
     }
     
+
 }
 
 @end
